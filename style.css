@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(to top, #006da4, #006494, #004d74);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff; /* Text color */
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    padding: 20px;
+    border: none; /* Removed border */
+    border-radius: 10px; /* Rounded border */
+    box-sizing: border-box; /* Include padding in width */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Added box shadow */
+    background-color: #00315a; /* Darker color than body */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-header {
+    margin-bottom: 10px; /* Added margin for spacing */
+    font-size: 26px; /* Decreased font size */
+}
+
+.password-label {
+    font-size: 24px; /* Increased font size */
+}
+
+#password{
+    width: 250px;
+    height: 36px;
+    color: white;
+    font-weight:bolder;
+    text-align: center;
+    background-color: #006da4;
+    border: 1px solid #006da4;
+}
+
+#password:active{
+    color: black;
+    background-color:white;
+    border: 1px solid #006da4;
+}
+
+label, input, button {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fff; /* Text color */
+    border-radius: 10px;
+}
+
+
+button {
+    width: 106px;
+    margin-top: 10px; /* Reduced margin */
+    padding: 10px; /* Added padding */
+    background-color: #006da4; /* Button color */
+    border: none; /* Removed border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+button:hover{
+    background-color: #006da4;
+}
+
+button:active {
+    transform: scale(.8); /* Scale up on hover */
+    background-color: #b5b8b9;
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 100%;
+    }
+
+    #login-form {
+        width: 90%;
+    }
+
+    .auth-header {
+        font-size: 20px; /* Reduced font size for mobile */
+    }
+
+    .password-label {
+        font-size: 16px; /* Reduced font size for mobile */
+    }
+}
+/* Your existing CSS styles */
+
+.show-password-checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.show-password-label {
+    cursor: pointer;
+    background-image: url('eye.png'); /* Replace 'eye-icon.png' with the path to your eye icon */
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px);
+}
+
+.show-password-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+}

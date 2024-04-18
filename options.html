@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="list-wrapper">
+        <ul class="list">
+            <a href="calculator.html" class="opt">
+                <li class="item">
+                    <h1>opt1</h1>
+                    <div class="content">
+                        <div class="wt">Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor </div>
+                        <div class="imt"><img src="prev.png"></div>
+                    </div>
+                </li>
+            </a>
+
+            <a href="#" class="opt">
+                <li class="item">
+                    <h1>opt1</h1>
+                    <div class="content">
+                        <div class="wt">Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor </div>
+                        <div class="imt"><img src="prev.png"></div>
+                    </div>
+                </li>
+            </a>
+            <li class="item"><div class="content"> 3</div></li>
+            <li class="item"><div class="content"> 4</div></li>
+            <li class="item"><div class="content"> 5</div></li>
+            <li class="item"><div class="content"> 6</div></li>
+            <li class="item"><div class="content"> 7</div></li>
+        </ul>
+        <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
+        <button onclick="handleClick('previous')" class="button button--previous" type="button"><img src="prev.png" alt="prev"></button>
+        <button onclick="handleClick('next')" class="button button--next" type="button"><img src="next.png" alt="next"></button>
+    </div>
+    <script>
+        const list = document.querySelector(".list");
+      
+        // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+        const item = document.querySelector(".item");
+        const itemWidth = item.offsetWidth;
+      
+        function handleClick(direction) {
+            // Based on the direction we call `scrollBy` with the item width we got earlier
+            if(direction === "previous") {
+                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+            } else {
+                list.scrollBy({ left: itemWidth, behavior: "smooth" });
+            }
+        }
+    </script>
+</body>
+</html>

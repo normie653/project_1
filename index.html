@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="namaste.png" alt="namaste.png">
+        <div id="login">
+            <form id="login-form">
+                <h1 class="auth-header">Authentication Required</h1>
+                <label for="password"><big class="password-label">Enter Password:</big></label>
+                <div class="password-input-container">
+                    <input type="password" id="password" name="password" required>
+                    <input type="checkbox" id="show-password-checkbox">
+                    <label for="show-password-checkbox" id="show-password-label" class="show-password-label"></label>
+                </div>
+                <button type="submit" id="login-btn">Login</button>
+            </form>
+        </div>
+        <p>&copy; 2024 A BlackCock Product. All rights reserved.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
